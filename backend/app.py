@@ -9,7 +9,7 @@ app = FastAPI()
 
 # Load Stable Diffusion model
 model_id = "CompVis/stable-diffusion-v1-4"
-pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float32)
 pipe.to("cpu")  # Use GPU if available
 
 # Define input model
