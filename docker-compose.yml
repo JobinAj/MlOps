@@ -5,6 +5,8 @@ services:
     build: ./backend
     ports:
       - "8000:8000"
+    volumes:
+      - ./backend/images:/app/images  # Persist generated images
 
   frontend:
     build: ./frontend
